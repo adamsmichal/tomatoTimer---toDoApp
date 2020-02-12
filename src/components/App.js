@@ -4,12 +4,11 @@ import Timer from './Timer/Timer';
 class App extends Component {
 
     state = {
-        isBreakTime: false,
+        
     }
 
     render() {
 
-        const {isBreakTime} = this.state;
         return(
             <React.Fragment>
                 <Timer/>
