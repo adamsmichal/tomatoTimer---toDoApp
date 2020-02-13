@@ -7,10 +7,13 @@ import SettingsPopup from './SettingsPopup/SettingsPopup';
 class Timer extends Component {
     state = { 
         hr: 0,
-        min: 30,
-        sec: 10,
+        min: 0,
+        sec: 3,
+        workHours: 0,
+        workMinutes: 30,
         shortBreak: 7,
         longBreak: 15,
+        breakTime: true,
         active: false,
         isOpen: false,
     }
@@ -20,7 +23,7 @@ class Timer extends Component {
         if(this.state.active) {
             clearInterval(this.idInterval);
         } else {
-            this.idInterval = setInterval(() => this.counting(), 1000)
+            this.idInterval = setInterval(() => this.countdown(), 1000)
         }
 
         this.setState({
@@ -30,11 +33,26 @@ class Timer extends Component {
     }
 
     //start counting and make some noise when finish
-    counting = () => {
+    countdown = () => {
         if(this.state.sec === 0) {
            if(this.state.min === 0) {
                if(this.state.hr === 0) {
-                   clearInterval(this.idInterval);
+                   if (this.state.breakTime) {
+                        this.setState({
+                            hr: 0,
+                            min: this.state.shortBreak,
+                            sec: 0,
+                            breakTime: false,
+                        })
+                   } else {
+                        this.setState({
+                            hr: this.state.workHours,
+                            min: this.state.workMinutes,
+                            sec: 0,
+                            breakTime: true,
+                        })
+                   }
+                   this.countdown();
                } else {
                    this.setState({
                        hr: this.state.hr - 1,
@@ -64,39 +82,43 @@ class Timer extends Component {
     }
 
     handleAddHrClick = () => {
-        if (this.state.hr < 5){
+        if (this.state.workHours < 5){
             this.setState({
                 hr: this.state.hr + 1,
+                workHours: this.state.workHours + 1,
             })
         }
     }
 
     handleSubHrClick = () => {
-        if (this.state.hr >= 0) {
+        if (this.state.workHours > 0) {
             this.setState({
-                hr: this.state.hr - 1, 
+                hr: this.state.hr - 1,
+                workHours: this.state.workHours - 1, 
             })
         }
     }
 
     handleAddMinClick = () => {
-        if (this.state.min <= 60) {
+        if (this.state.workMinutes < 60) {
             this.setState({
-                min: this.state.min + 1, 
+                min: this.state.min + 1,
+                workMinutes: this.state.workMinutes + 1,
             })
         }
     }
 
     handleSubMinClick = () => {
-        if (this.state.min > 0) {
+        if (this.state.workMinutes > 1) {
             this.setState({
-                min: this.state.min - 1, 
+                min: this.state.min - 1,
+                workMinutes: this.state.workMinutes - 1, 
             })
         }
     }
 
     handleAddShortBreakClick = () => {
-        if (this.state.shortBreak < 10) {
+        if (this.state.shortBreak < 9) {
             this.setState({
                 shortBreak: this.state.shortBreak + 1, 
             })
@@ -104,7 +126,7 @@ class Timer extends Component {
     }
 
     handleSubShortBreakClick = () => {
-        if (this.state.shortBreak > 0) {
+        if (this.state.shortBreak > 1) {
             this.setState({
                 shortBreak: this.state.shortBreak - 1, 
             })
@@ -112,15 +134,15 @@ class Timer extends Component {
     }
 
     handleAddLongBreakClick = () => {
-        if (this.state.shortBreak < 20) {
+        if (this.state.longBreak < 20) {
             this.setState({
                 longBreak: this.state.longBreak + 1, 
             })
         }
     }
 
-    handleAddLongBreakClick = () => {
-        if (this.state.shortBreak > 10) {
+    handleSubLongBreakClick = () => {
+        if (this.state.longBreak > 10) {
             this.setState({
                 longBreak: this.state.longBreak - 1, 
             })
@@ -128,14 +150,15 @@ class Timer extends Component {
     }
 
     render() { 
-        const { hr, min, sec, active } = this.state;
+        const { active, isOpen, breakTime } = this.state;
         return (
             <React.Fragment>
-                <Clock hr={hr} min={min} sec={sec}/>
+                <Clock {...this.state}/>
                 <StartButton active={active} startCounting={this.handleStartButtonClick} />
                 <SettingsButton openSettings={this.handleSettingsButtonClick} />
                 <SettingsPopup 
-                    {...this.state}
+                    isOpen={isOpen}
+                    breakTime={breakTime}
                     addHr={this.handleAddHrClick}
                     subHr={this.handleSubHrClick}
                     addMin={this.handleAddMinClick}

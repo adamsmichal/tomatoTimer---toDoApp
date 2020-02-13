@@ -21,6 +21,10 @@ const SettingsPopup = (props) => {
 
     if (!props.isOpen) {
         content = null;
+    } else if (!props.breakTime) {
+        content = (
+            <p>It's time to rest!</p>
+        )
     }
 
     return(
