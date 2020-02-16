@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Timer from './Timer/Timer';
+import ToDo from './ToDo/ToDo';
 
 class App extends Component {
 
@@ -12,6 +13,7 @@ class App extends Component {
         return(
             <React.Fragment>
                 <Timer/>
+                <ToDo />
             </React.Fragment>
         )
     }
