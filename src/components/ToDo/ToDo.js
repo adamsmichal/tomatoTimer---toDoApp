@@ -3,28 +3,23 @@ import AddTask from './AddTask/AddTask';
 import TaskList from './TaskList/TaskList';
 
 class ToDo extends Component {
+    counter = 0
     state = {
-        tasks: [
-            {
-                id: 0,
-                text: 'Treść zadania',
-                important: false,
-                active: true,
-            }
-        ]
+        tasks: []
     }
 
     handleDoneButtonClick = (id) => {
-        console.log('Done' + id);
         let tasks = [...this.state.tasks];
         tasks.forEach(task => {
             if (task.id === id){
                 task.active = false;
+                task.time = new Date().getTime();
             }
         });
         this.setState({
             tasks
         })
+        console.log(tasks);
     }
 
     handleDeleteButtonClick = (id) => {
@@ -37,10 +32,27 @@ class ToDo extends Component {
         })
     }
 
+    addTask = (text, ifImportant) => {
+        console.log("dodany obiekt");
+        const task = {
+            id: this.counter,
+            text: text,
+            important: ifImportant,
+            active: true,
+            time: new Date().getTime(),
+        }
+        this.counter++
+        
+        this.setState(prevState => ({
+            tasks: [...prevState.tasks, task]
+        }))
+        return true;
+    }
+
     render() { 
         return (
             <React.Fragment>
-                <AddTask />
+                <AddTask addTask={this.addTask}/>
                 <TaskList 
                     tasks={this.state.tasks} 
                     changeTaskStatus={this.handleDoneButtonClick} 
