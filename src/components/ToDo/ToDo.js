@@ -8,18 +8,21 @@ class ToDo extends Component {
         tasks: []
     }
 
-    handleDoneButtonClick = (id) => {
+    handleDoneButtonClick = (id, important) => {
         let tasks = [...this.state.tasks];
         tasks.forEach(task => {
             if (task.id === id){
                 task.active = false;
                 task.time = new Date().getTime();
             }
+
+            if (task.important) {
+                this.props.addDoneTasks();
+            }
         });
         this.setState({
             tasks
         })
-        console.log(tasks);
     }
 
     handleDeleteButtonClick = (id) => {

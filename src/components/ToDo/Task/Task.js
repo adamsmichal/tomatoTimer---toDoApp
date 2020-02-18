@@ -13,7 +13,7 @@ const Task = (props) => {
             <div>
                 <p>
                     <strong style={important ? importantStyle : null}>{text}</strong> - <span>dodano o {addTime}</span>
-                    <button onClick={() => props.changeTaskStatus(id)}>Zostało zrobione</button>
+                    <button onClick={() => props.changeTaskStatus(id, important)}>Zostało zrobione</button>
                     <button onClick={() => props.deleteTask(id)}>X</button>
                 </p>
             </div>

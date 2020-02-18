@@ -68,15 +68,15 @@ class Timer extends Component {
             if ((this.state.counter % 3) === 0) {
                 this.setState({
                     hr: 0,
-                    min: this.state.longBreak,
+                    min: this.state.longBreak + this.props.doneTasks,
                     sec: 0,
                     breakTime: false,
                 })
             } else {
                 this.setState({
                     hr: 0,
-                    min: 0,
-                    sec: 7,
+                    min: this.state.shortBreak + this.props.doneTasks,
+                    sec: 0,
                     breakTime: false,
                 })
             }
@@ -88,6 +88,7 @@ class Timer extends Component {
                 breakTime: true,
                 counter: this.state.counter + 1,
             })
+            this.props.resetAddTasks();
         }
     }
 
