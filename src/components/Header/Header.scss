@@ -1,0 +1,12 @@
+.header {
+    color: white;
+    text-align: center;
+    padding: 50px 0 40px;
+
+    &__title {
+        margin: 0;
+        font-size: 2.4rem;
+        font-family: $main-font;
+        letter-spacing: 3px;
+    }
+}

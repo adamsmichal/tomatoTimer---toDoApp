@@ -1,0 +1,13 @@
+@import './sass/setup/normalize.scss';
+@import './sass/setup/toolbox.scss';
+
+@import './sass/utilities/mixin.scss';
+
+@import './components/App.scss';
+@import './components/Header/Header.scss';
+@import './components/Timer/Timer.scss';
+@import './components/Timer/Clock/Clock.scss';
+@import './components/Timer/StartButton/StartButton.scss';
+@import './components/Timer/SettingsButton/SettingsButton.scss';
+
+@import './sass/atomic-class/atomic-class.scss';

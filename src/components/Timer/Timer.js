@@ -176,22 +176,24 @@ class Timer extends Component {
     render() { 
         const { active, } = this.state;
         return (
-            <React.Fragment>
-                <Clock {...this.state}/>
-                <StartButton active={active} startCounting={this.handleStartButtonClick} />
-                <SettingsButton openSettings={this.handleSettingsButtonClick} />
-                <SettingsPopup 
-                    {...this.state}
-                    addHr={this.handleAddHrClick}
-                    subHr={this.handleSubHrClick}
-                    addMin={this.handleAddMinClick}
-                    subMin={this.handleSubMinClick}
-                    addShortBreak={this.handleAddShortBreakClick}
-                    subShortBreak={this.handleSubShortBreakClick}
-                    addLongBreak={this.handleAddLongBreakClick}
-                    subLongBreak={this.handleSubLongBreakClick}
-                />
-            </React.Fragment>
+            <section className={'center-wrapper'}>
+                <div className={'timer'}>
+                    <Clock {...this.state}/>
+                    <StartButton active={active} startCounting={this.handleStartButtonClick} />
+                    <SettingsButton openSettings={this.handleSettingsButtonClick} />
+                    <SettingsPopup 
+                        {...this.state}
+                        addHr={this.handleAddHrClick}
+                        subHr={this.handleSubHrClick}
+                        addMin={this.handleAddMinClick}
+                        subMin={this.handleSubMinClick}
+                        addShortBreak={this.handleAddShortBreakClick}
+                        subShortBreak={this.handleSubShortBreakClick}
+                        addLongBreak={this.handleAddLongBreakClick}
+                        subLongBreak={this.handleSubLongBreakClick}
+                    />
+                </div>
+            </section>
         );
     }
 }

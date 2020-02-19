@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Timer from './Timer/Timer';
 import ToDo from './ToDo/ToDo';
+import Header from './Header/Header';
 
 class App extends Component {
 
@@ -24,6 +25,7 @@ class App extends Component {
 
         return(
             <React.Fragment>
+                <Header />
                 <Timer 
                     doneTasks={this.state.doneTasks}
                     resetAddTasks={this.resetAddTasks}
