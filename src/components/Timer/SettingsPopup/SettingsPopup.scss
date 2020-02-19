@@ -1,0 +1,25 @@
+.settings-popup {
+    position: absolute;
+    left: 50%;
+    top: 40vh;
+    transform: translate(-50%,-50%);
+    width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+
+    &__item {
+        margin: 15px;
+        display: flex;
+        justify-content: space-between;
+        color: $dark-red;
+
+        & button {
+            border: none;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            background-color: $main-btn;
+            color: #fff;
+        }
+    }
+}
