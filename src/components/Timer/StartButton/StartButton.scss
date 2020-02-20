@@ -3,4 +3,12 @@
     width: 120px;
     height: 40px;
     margin: 0px 5px 15px;
+
+    &:hover {
+        background-color: lighten($main-btn, 5);
+    }
+
+    &:active {
+        transform: translateY(1px);
+    }
 }

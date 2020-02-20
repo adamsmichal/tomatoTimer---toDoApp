@@ -35,5 +35,14 @@
         font-size: 3rem;
         width: 35px;
         height: 35px;
+        outline: none;
+
+        &:hover {
+            background-color: lighten($main-btn, 5);
+        }
+    
+        &:active {
+            transform: translateY(1px);
+        }
     }
 }

@@ -21,6 +21,15 @@
             height: 24px;
             background-color: $main-btn;
             color: #fff;
+            outline: none;
+
+            &:hover {
+                background-color: lighten($main-btn, 5);
+            }
+        
+            &:active {
+                transform: translateX(1px);
+            }
         }
     }
 }
