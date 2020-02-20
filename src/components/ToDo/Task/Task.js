@@ -11,7 +11,7 @@ const Task = (props) => {
         const addTime = new Date(time).toLocaleTimeString(); 
         return (
             <div className={'to-do-tasks'}>
-                <p className={'to-do-tasks__task'}>
+                <div className={'to-do-tasks__task'}>
                     <div>
                         <strong className={'to-do-tasks__title'} style={important ? importantStyle : null}>{text}</strong>
                     </div>
@@ -22,20 +22,20 @@ const Task = (props) => {
                             <button className={'to-do-tasks__btn functional-btn'} onClick={() => props.deleteTask(id)}>X</button>
                         </div>
                     </div>
-                </p>
+                </div>
             </div>
         );
     } else {
         const endTime = new Date(time).toLocaleTimeString();  
         return (
             <div className={'done-tasks'}>
-                <p className={'done-tasks__task'}>
+                <div className={'done-tasks__task'}>
                     <strong className={'done-tasks__text'}>{text}</strong> 
                     <div className={'done-tasks__item'}>
                         <span className={'done-tasks__information'}>{endTime}</span>
                         <button className={'functional-btn done-tasks__btn'} onClick={() => props.deleteTask(id)}>X</button>
                     </div>
-                </p>
+                </div>
             </div>
         )
     }
