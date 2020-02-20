@@ -1,0 +1,39 @@
+.to-do-form {
+    display: flex;
+    margin-bottom: 35px;
+
+    &__text {
+        border: none;
+        width: 80%;
+        height: 35px;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-right: 10px;
+    }
+
+    &__check {
+        appearance: none;
+        outline: none;
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+        background-image: url(../../../assets/fire-solid.svg);
+        filter: invert(100%);
+        background-repeat: no-repeat;
+
+        &:checked {
+            filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+        }
+    }
+
+    &__btn {
+        border-radius: 50%;
+        border: none;
+        background-color: $main-btn;
+        color: white;
+        font-size: 3rem;
+        width: 35px;
+        height: 35px;
+    }
+}

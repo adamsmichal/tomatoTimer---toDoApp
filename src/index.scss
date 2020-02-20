@@ -3,12 +3,18 @@
 
 @import './sass/utilities/mixin.scss';
 
+//body & header
 @import './components/App.scss';
 @import './components/Header/Header.scss';
+//timer
 @import './components/Timer/Timer.scss';
 @import './components/Timer/Clock/Clock.scss';
 @import './components/Timer/StartButton/StartButton.scss';
 @import './components/Timer/SettingsButton/SettingsButton.scss';
 @import './components/Timer/SettingsPopup/SettingsPopup.scss';
+//to do list
+@import './components/ToDo/AddTask/AddTask.scss';
+@import './components/ToDo/TaskList/TaskList.scss';
+@import './components/ToDo/Task/Task.scss';
 
 @import './sass/atomic-class/atomic-class.scss';

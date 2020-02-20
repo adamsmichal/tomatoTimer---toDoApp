@@ -31,12 +31,10 @@ class AddTask extends Component {
 
     render() { 
         return (
-            <div className="form">
-                <input type="text" placeholder="dodaj zadanie" value={this.state.text} onChange={this.handleText}/>
-                <input type="checkbox" id='important' checked={this.state.checked} onChange={this.handleCheckbox}/>
-                <label htmlFor="important">Priorytet</label>
-                <br/>
-                <button onClick={this.handleAddClick}>Dodaj</button>
+            <div className="to-do-form">
+                <input className={'to-do-form__text'} type="text" placeholder="dodaj zadanie" value={this.state.text} onChange={this.handleText}/>
+                <input className={'to-do-form__check'} type="checkbox" id='important' checked={this.state.checked} onChange={this.handleCheckbox}/>
+                <button className={'to-do-form__btn'} onClick={this.handleAddClick}>+</button>
             </div>
         );
     }

@@ -54,14 +54,14 @@ class ToDo extends Component {
 
     render() { 
         return (
-            <React.Fragment>
+            <div className={'center-wrapper'}>
                 <AddTask addTask={this.addTask}/>
                 <TaskList 
                     tasks={this.state.tasks} 
                     changeTaskStatus={this.handleDoneButtonClick} 
                     deleteTask={this.handleDeleteButtonClick}
                 />
-            </React.Fragment>
+            </div>
         );
     }
 }

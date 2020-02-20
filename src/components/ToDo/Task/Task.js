@@ -10,21 +10,31 @@ const Task = (props) => {
     if (active) { 
         const addTime = new Date(time).toLocaleTimeString(); 
         return (
-            <div>
-                <p>
-                    <strong style={important ? importantStyle : null}>{text}</strong> - <span>dodano o {addTime}</span>
-                    <button onClick={() => props.changeTaskStatus(id, important)}>Zostało zrobione</button>
-                    <button onClick={() => props.deleteTask(id)}>X</button>
+            <div className={'to-do-tasks'}>
+                <p className={'to-do-tasks__task'}>
+                    <div>
+                        <strong className={'to-do-tasks__title'} style={important ? importantStyle : null}>{text}</strong>
+                    </div>
+                    <div className={'to-do-tasks__item'}>
+                        <span className={'to-do-tasks__information'}>({addTime})</span>
+                        <div>
+                            <button className={'to-do-tasks__btn functional-btn'} onClick={() => props.changeTaskStatus(id, important)}>Done</button>
+                            <button className={'to-do-tasks__btn functional-btn'} onClick={() => props.deleteTask(id)}>X</button>
+                        </div>
+                    </div>
                 </p>
             </div>
         );
     } else {
         const endTime = new Date(time).toLocaleTimeString();  
         return (
-            <div>
-                <p>
-                    <strong>{text}</strong> - <span>wykonano o {endTime}</span>
-                    <button onClick={() => props.deleteTask(id)}>X</button>
+            <div className={'done-tasks'}>
+                <p className={'done-tasks__task'}>
+                    <strong className={'done-tasks__text'}>{text}</strong> 
+                    <div className={'done-tasks__item'}>
+                        <span className={'done-tasks__information'}>{endTime}</span>
+                        <button className={'functional-btn done-tasks__btn'} onClick={() => props.deleteTask(id)}>X</button>
+                    </div>
                 </p>
             </div>
         )

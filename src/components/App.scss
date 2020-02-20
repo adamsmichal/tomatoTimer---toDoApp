@@ -2,5 +2,8 @@ body {
     font-family: $main-font;
     background: linear-gradient(#FDC9BD, #EC8585);
     background-repeat: no-repeat;
-    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
 }
