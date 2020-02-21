@@ -3,6 +3,7 @@ import Clock from './Clock/Clock';
 import StartButton from './StartButton/StartButton';
 import SettingsButton from './SettingsButton/SettingsButton';
 import SettingsPopup from './SettingsPopup/SettingsPopup';
+import niceSound from '../../assets/sound/niceSound.wav';
 
 class Timer extends Component {
     state = { 
@@ -33,11 +34,17 @@ class Timer extends Component {
         })
     }
 
+    playSound = () => {
+        const audio = new Audio(niceSound);
+        audio.play();
+    }
+
     //start counting and make some noise when finish
     countdown = () => {
         if(this.state.sec === 0) {
            if(this.state.min === 0) {
                if(this.state.hr === 0) {
+                   this.playSound();
                    clearInterval(this.idInterval);
                    this.setState({
                        active: !this.state.active
