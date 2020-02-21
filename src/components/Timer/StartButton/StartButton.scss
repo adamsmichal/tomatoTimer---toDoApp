@@ -4,11 +4,29 @@
     height: 40px;
     margin: 0px 5px 15px;
 
-    &:hover {
-        background-color: lighten($main-btn, 5);
-    }
-
     &:active {
         transform: translateY(1px);
+    }
+}
+
+@media screen and (min-width: $third-break-point) {
+    .start-btn {
+        width: 160px;
+        height: 60px;
+    }
+}
+
+@media screen and (min-width: $fourth-break-point) {
+    .start-btn {    
+        &:hover {
+            background-color: lighten($main-btn, 5);
+        }
+    }
+}
+
+@media screen and (min-width: $fifth-break-point) {
+    .start-btn {
+        width: 240px;
+        height: 70px;
     }
 }

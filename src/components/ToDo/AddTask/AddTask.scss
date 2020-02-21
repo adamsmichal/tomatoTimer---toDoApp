@@ -4,12 +4,13 @@
 
     &__text {
         border: none;
-        width: 80%;
+        width: 100%;
         height: 35px;
         border-radius: 10px;
         padding-left: 10px;
         padding-right: 10px;
-        margin-right: 10px;
+        margin-right: 15px;
+        outline: none;
     }
 
     &__check {
@@ -33,16 +34,41 @@
         background-color: $main-btn;
         color: white;
         font-size: 3rem;
-        width: 35px;
+        min-width: 35px;
         height: 35px;
         outline: none;
-
-        &:hover {
-            background-color: lighten($main-btn, 5);
-        }
     
         &:active {
             transform: translateY(1px);
+        }
+    }
+}
+
+@media screen and (min-width: $third-break-point) {
+    .to-do-form {
+        &__text {
+            height: 45px;
+            font-size: 2rem;
+        }
+
+        &__check {
+            width: 45px;
+            height: 45px;
+        }
+
+        &__btn {
+            min-width: 45px;
+            height: 45px;
+        }
+    }
+}
+
+@media screen and (min-width: $fourth-break-point) {
+    .to-do-form {
+        &__btn {
+            &:hover {
+                background-color: lighten($main-btn, 5);
+            }
         }
     }
 }

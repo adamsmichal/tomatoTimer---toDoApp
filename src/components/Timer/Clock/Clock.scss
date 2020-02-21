@@ -1,6 +1,24 @@
 .clock {
     font-family: $Arial;
-    font-size: 4.5rem;
+    font-size: 3rem;
     color: $dark-red;
     padding: 15px 0px 10px;
+}
+
+@media screen and (min-width: $first-break-point) {
+    .clock {
+        font-size: 4.5rem;
+    }
+}
+
+@media screen and (min-width: $third-break-point) {
+    .clock {
+        font-size: 6rem;
+    }
+}
+
+@media screen and (min-width: $fifth-break-point) {
+    .clock {
+        font-size: 8rem;
+    }
 }

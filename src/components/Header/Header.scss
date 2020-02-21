@@ -10,3 +10,20 @@
         letter-spacing: 3px;
     }
 }
+
+@media screen and (min-width: $third-break-point) {
+    .header {
+        &__title {
+            font-size: 3.4rem;
+        }
+    }
+}
+
+@media screen and (min-width: $fourth-break-point) {
+    .header {
+        &__title {
+            font-size: 4.4rem;
+            margin-bottom: 80px;
+        }
+    }
+}

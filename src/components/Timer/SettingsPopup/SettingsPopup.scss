@@ -2,11 +2,14 @@
     z-index: 100;
     position: absolute;
     left: 50%;
-    top: 40vh;
+    top: 170%;
     transform: translate(-50%,-50%);
     width: 250px;
     background-color: #fff;
     border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 31px 8px rgba(0,0,0,0.55);
+    -moz-box-shadow: 0px 0px 31px 8px rgba(0,0,0,0.55);
+    box-shadow: 0px 0px 31px 8px rgba(0,0,0,0.55);
 
     &__item {
         margin: 15px;
@@ -22,13 +25,76 @@
             background-color: $main-btn;
             color: #fff;
             outline: none;
-
-            &:hover {
-                background-color: lighten($main-btn, 5);
-            }
         
             &:active {
                 transform: translateX(1px);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $first-break-point) {
+    .settings-popup {
+        top: 180%;
+        width: 290px;
+    }
+}
+
+@media screen and (min-width: $secound-break-point) {
+    .settings-popup {
+        top: 190%;
+        width: 340px;
+
+        &__item {
+            font-size: 2rem;
+
+            & button {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $third-break-point) {
+    .settings-popup {
+        top: 180%;
+        width: 370px;
+
+        &__item {
+            font-size: 2rem;
+
+            & button {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $fourth-break-point) {
+    .settings-popup {
+        &__item {
+            & button {
+                &:hover {
+                    background-color: lighten($main-btn, 5);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $fifth-break-point) {
+    .settings-popup {
+        top: 180%;
+        width: 450px;
+
+        &__item {
+            font-size: 2.5rem;
+
+            & button {
+                width: 35px;
+                height: 35px;
             }
         }
     }

@@ -4,11 +4,29 @@
     height: 40px;
     margin: 0px 5px 15px;
 
-    &:hover {
-        background-color: darken($added-btn, 5);
-    }
-
     &:active {
         transform: translateY(1px);
+    }
+}
+
+@media screen and (min-width: $third-break-point) {
+    .settings-btn {
+        width: 190px;
+        height: 60px;
+    }
+}
+
+@media screen and (min-width: $fourth-break-point) {
+    .settings-btn {
+        &:hover {
+            background-color: darken($added-btn, 5);
+        }
+    }
+}
+
+@media screen and (min-width: $fifth-break-point) {
+    .settings-btn {
+        width: 280px;
+        height: 70px;
     }
 }

@@ -54,7 +54,7 @@ class ToDo extends Component {
 
     render() { 
         return (
-            <div className={'center-wrapper'}>
+            <div className={'to-do-app center-wrapper'}>
                 <AddTask addTask={this.addTask}/>
                 <TaskList 
                     tasks={this.state.tasks} 

@@ -4,4 +4,31 @@
     border-radius: 10px;
     text-align: center;
     margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+@media screen and (min-width: $secound-break-point) {
+    .timer {
+        max-width: 380px;
+    }
+}
+
+@media screen and (min-width: $third-break-point) {
+    .timer {
+       max-width: 500px; 
+    }
+}
+
+@media screen and (min-width: $fourth-break-point) {
+    .timer {
+       min-width: 400px; 
+    }
+}
+
+@media screen and (min-width: $fifth-break-point) {
+    .timer {
+       max-width: 700px;
+    }
 }

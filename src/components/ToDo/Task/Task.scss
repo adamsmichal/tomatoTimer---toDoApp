@@ -12,6 +12,7 @@
     &__item {
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
         margin-top: 15px;
     }
 
@@ -20,17 +21,13 @@
         height: 25px;
         margin: 0 3px;
         padding-left: 8px;
-
-        &:hover {
-            background-color: lighten($main-btn, 5);
-        }
     
         &:active {
             transform: translateY(1px);
         }
     }
 
-    &__title {
+    &__text {
         word-break: break-all;
     }
 }
@@ -40,7 +37,7 @@
         background-color: rgba($color: #fff, $alpha: .5);
         border-radius: 10px;
         min-height: 35px;
-        padding: 5px 0 5px 5px;
+        padding: 5px;
         margin-bottom: 10px;
         display: flex;
         justify-content: space-between;
@@ -53,11 +50,14 @@
         justify-content: space-between;
         margin-left: 10px;
         margin-right: 10px;
-
     }
 
     &__text {
         word-break: break-all;
+    }
+
+    &__information {
+        margin-bottom: 5px;
     }
 
     &__btn {
@@ -65,10 +65,6 @@
         height: 25px;
         width: 25px;
         padding-left: 7px;
-
-        &:hover {
-            background-color: lighten($main-btn, 5);
-        }
     
         &:active {
             transform: translateY(1px);
@@ -76,3 +72,67 @@
     }
 }
 
+@media screen and (min-width: $third-break-point) {
+    .to-do-tasks {
+        &__task {
+            min-height: 55px;
+            padding: 10px;
+        }
+
+        &__item {
+            margin-top: 10px;
+        }
+
+        &__btn {
+            height: 35px;
+        }
+
+        &__text {
+            font-size: 2rem;
+        }
+
+        &__information {
+            font-size: 1.8rem;
+        }
+    }
+
+    .done-tasks {
+        &__task {
+            min-height: 55px;
+            padding: 10px;
+        }
+
+        &__btn {
+            height: 35px;
+            width: 30px;
+            padding-left: 8px;
+            padding-right: 6px;
+        }
+
+        &__text {
+            font-size: 2rem;
+        }
+
+        &__information {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@media screen and (min-width: $fourth-break-point) {
+    .to-do-tasks {
+        &__btn {
+            &:hover {
+                background-color: lighten($main-btn, 5);
+            }
+        }
+    }
+
+    .done-tasks {
+        &__btn {
+            &:hover {
+                background-color: lighten($main-btn, 5);
+            }
+        }
+    }
+}

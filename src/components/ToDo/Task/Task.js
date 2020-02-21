@@ -13,10 +13,10 @@ const Task = (props) => {
             <div className={'to-do-tasks'}>
                 <div className={'to-do-tasks__task'}>
                     <div>
-                        <strong className={'to-do-tasks__title'} style={important ? importantStyle : null}>{text}</strong>
+                        <strong className={'to-do-tasks__text'} style={important ? importantStyle : null}>{text}</strong>
                     </div>
                     <div className={'to-do-tasks__item'}>
-                        <span className={'to-do-tasks__information'}>({addTime})</span>
+                        <span className={'to-do-tasks__information'}>{addTime}</span>
                         <div>
                             <button className={'to-do-tasks__btn functional-btn'} onClick={() => props.changeTaskStatus(id, important)}>Done</button>
                             <button className={'to-do-tasks__btn functional-btn'} onClick={() => props.deleteTask(id)}>X</button>

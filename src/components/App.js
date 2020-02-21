@@ -26,13 +26,15 @@ class App extends Component {
         return(
             <React.Fragment>
                 <Header />
-                <Timer 
-                    doneTasks={this.state.doneTasks}
-                    resetAddTasks={this.resetAddTasks}
-                />
-                <ToDo 
-                    addDoneTasks={this.addDoneTasks} 
-                />
+                <main className={'main'}>
+                    <Timer 
+                        doneTasks={this.state.doneTasks}
+                        resetAddTasks={this.resetAddTasks}
+                    />
+                    <ToDo 
+                        addDoneTasks={this.addDoneTasks} 
+                    />
+                </main>
             </React.Fragment>
         )
     }

@@ -7,3 +7,10 @@ body {
     background-attachment: fixed;
     height: 100%;
 }
+
+@media screen and (min-width: $fourth-break-point) {
+    .main {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
