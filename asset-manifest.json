@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/tomatoTimer-toDoApp/static/css/main.4ef5c90a.chunk.css",
+    "main.js": "/tomatoTimer-toDoApp/static/js/main.2a3e65bc.chunk.js",
+    "main.js.map": "/tomatoTimer-toDoApp/static/js/main.2a3e65bc.chunk.js.map",
+    "runtime-main.js": "/tomatoTimer-toDoApp/static/js/runtime-main.862803fc.js",
+    "runtime-main.js.map": "/tomatoTimer-toDoApp/static/js/runtime-main.862803fc.js.map",
+    "static/js/2.107f1ddb.chunk.js": "/tomatoTimer-toDoApp/static/js/2.107f1ddb.chunk.js",
+    "static/js/2.107f1ddb.chunk.js.map": "/tomatoTimer-toDoApp/static/js/2.107f1ddb.chunk.js.map",
+    "index.html": "/tomatoTimer-toDoApp/index.html",
+    "precache-manifest.5095a3b3e72b7e1b67ebe0856a0d9bb7.js": "/tomatoTimer-toDoApp/precache-manifest.5095a3b3e72b7e1b67ebe0856a0d9bb7.js",
+    "service-worker.js": "/tomatoTimer-toDoApp/service-worker.js",
+    "static/css/main.4ef5c90a.chunk.css.map": "/tomatoTimer-toDoApp/static/css/main.4ef5c90a.chunk.css.map",
+    "static/js/2.107f1ddb.chunk.js.LICENSE.txt": "/tomatoTimer-toDoApp/static/js/2.107f1ddb.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/tomatoTimer-toDoApp/static/media/info-solid.17861ffe.svg",
+    "static/media/niceSound.wav": "/tomatoTimer-toDoApp/static/media/niceSound.7726bd8e.wav"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.862803fc.js",
+    "static/js/2.107f1ddb.chunk.js",
+    "static/css/main.4ef5c90a.chunk.css",
+    "static/js/main.2a3e65bc.chunk.js"
+  ]
+}
