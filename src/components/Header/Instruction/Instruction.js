@@ -6,9 +6,9 @@ const Instruction = (props) => {
         <div className={'instruction'}>
             <ul className={'instruction__list'}>
                 <h2 className={'instruction__title'}>Instruction</h2>
-                <li>To add task you can press button or hit enter</li>
+                <li>To add task you can either press the button or hit enter</li>
                 <hr/>
-                <li>To add the priority task, check fire icon next to text field</li>
+                <li>To add the priority task, check fire icon next to the text field</li>
                 <hr/>
                 <li>You will get an extra minute to break time for each completed priority task</li>
                 <hr/>
