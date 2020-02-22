@@ -25,6 +25,7 @@
             background-color: $main-btn;
             color: #fff;
             outline: none;
+            cursor: pointer;
         
             &:active {
                 transform: translateX(1px);

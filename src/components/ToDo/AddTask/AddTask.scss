@@ -22,6 +22,7 @@
         background-image: url(../../../assets/icon/fire-solid.svg);
         filter: invert(100%);
         background-repeat: no-repeat;
+        cursor: pointer;
 
         &:checked {
             filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
@@ -37,6 +38,7 @@
         min-width: 35px;
         height: 35px;
         outline: none;
+        cursor: pointer;
     
         &:active {
             transform: translateY(1px);

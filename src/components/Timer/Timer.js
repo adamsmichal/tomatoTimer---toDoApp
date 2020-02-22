@@ -36,6 +36,7 @@ class Timer extends Component {
 
     playSound = () => {
         const audio = new Audio(niceSound);
+        audio.volume = 0.2;
         audio.play();
     }
 
