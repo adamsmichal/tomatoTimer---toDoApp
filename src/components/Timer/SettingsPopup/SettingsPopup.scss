@@ -32,6 +32,20 @@
             }
         }
     }
+
+    &__caption {
+        font-size: 1.2rem;
+    }
+
+    &__annotation {
+        position: absolute;
+        left: 50%;
+        top: 106%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        color: white;
+        font-size: 2rem;
+    }
 }
 
 @media screen and (min-width: $first-break-point) {
@@ -53,6 +67,10 @@
                 width: 30px;
                 height: 30px;
             }
+        }
+
+        &__caption {
+            font-size: 1.4rem;
         }
     }
 }
@@ -82,6 +100,10 @@
                 }
             }
         }
+
+        &__annotation {
+            font-size: 3rem;
+        }
     }
 }
 
@@ -97,6 +119,14 @@
                 width: 35px;
                 height: 35px;
             }
+        }
+
+        &__caption {
+            font-size: 1.6rem;
+        }
+
+        &__annotation {
+            font-size: 3rem;
         }
     }
 }

@@ -14,7 +14,13 @@ const SettingsPopup = (props) => {
                 <button onClick={props.subShortBreak}>-</button>Short break: {props.shortBreak} min<button onClick={props.addShortBreak}>+</button>
             </div>
             <div className={'settings-popup__item'}>
-                <button onClick={props.subLongBreak}>-</button>Long break: {props.longBreak} min<button onClick={props.addLongBreak}>+</button>
+                <button onClick={props.subLongBreak}>-</button>
+                    <div>
+                        Long break: {props.longBreak} min
+                        <br/>
+                        <span className={'settings-popup__caption'}>(every 3 periods)</span>
+                    </div>
+                <button onClick={props.addLongBreak}>+</button>
             </div>
         </div>
     )
@@ -23,7 +29,7 @@ const SettingsPopup = (props) => {
         content = null;
     } else if (!props.breakTime) {
         content = (
-            <p>It's time to rest!</p>
+            <p className={'settings-popup__annotation'}>It's time to rest!</p>
         )
     }
 
