@@ -74,6 +74,7 @@ box-shadow: 0px 0px 34px 5px rgba(0,0,0,0.75);
 
 @media screen and (min-width: $fourth-break-point) {
     .instruction {
+        width: 60vw;
         top: 150%;
 
         &__btn {
