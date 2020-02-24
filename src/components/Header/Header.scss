@@ -42,5 +42,16 @@
             font-size: 4.4rem;
             margin-bottom: 80px;
         }
+
+        &__info {
+            &:hover {
+                filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(140%) contrast(40%);
+            }
+
+            &:active {
+                width: 33px;
+                height: 33px;
+            }
+        }
     }
 }
