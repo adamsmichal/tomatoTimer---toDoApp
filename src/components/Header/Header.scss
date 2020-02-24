@@ -28,6 +28,17 @@
     }
 }
 
+@media screen and (min-width: $first-break-point) {
+    .header {
+        &__info {
+            &:active {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: $third-break-point) {
     .header {
         &__title {
